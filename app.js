@@ -12,6 +12,38 @@ const app = Vue.createApp({
     setText() {
       this.message = this.currentUserInput;
     },
+    setRefText() {
+      this.message = this.$refs.userText.value;
+    },
+    unmountVueApp() {
+      if(confirm('It can\'t be undone, Are you sure?')){
+        app.unmount();
+      }
+    }
+  },
+  created() {
+    console.log('2 . created');
+  },
+  beforeCreate() {
+    console.log('1. before create');
+  },
+  beforeMount() {
+    console.log('3. before mount');
+  },
+  mounted() {
+    console.log('4. mounted');
+  },
+  beforeUpdate() {
+    console.log('5. before update'); // will run only if prop got updated
+  },
+  updated() {
+    console.log('6. updated'); // will run only if prop got updated
+  },
+  beforeUnmount() {
+    console.log('7. before unmount');
+  },
+  unmounted() {
+    console.log('8. unmounted');
   },
 });
 

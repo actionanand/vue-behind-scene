@@ -20,7 +20,12 @@
       <h2>How Vue Works</h2>
       <input type="text" @input="saveInput">
       <button @click="setText">Set Text</button>
+      <br>
+      <input type="text" ref="userText">
+      <button @click="setRefText">Set Text</button>
       <p>{{ message }}</p>
+      <button @click="unmountVueApp">Do you wanna 'Unmount' Vue app?</button>
+      <p>Please see the console for more details</p>
     </section>
   </body>
 </html>
