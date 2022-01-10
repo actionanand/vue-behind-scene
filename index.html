@@ -20,6 +20,9 @@
       <h2>How Vue Works</h2>
       <input type="text" @input="saveInput">
       <button @click="setText">Set Text</button>
+      <br>
+      <input type="text" ref="userText">
+      <button @click="setRefText">Set Text</button>
       <p>{{ message }}</p>
     </section>
   </body>
